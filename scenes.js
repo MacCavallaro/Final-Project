@@ -26,9 +26,7 @@ function start()  {
       textSize(30);
       noStroke();
 
-      if (!title_snd.isPlaying()) {
-        title_snd.play();
-    }
+
    
       bob.visible = false;
       chad.visible = false;
@@ -62,7 +60,11 @@ push();
       }
   }
 
-  this.mousePressed = function() {}
+  this.mousePressed = function() {
+        if (!title_snd.isPlaying()) {
+      title_snd.play();
+  }
+  }
 }
 
 ///////////////////////  2  ////////////////////////
